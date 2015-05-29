@@ -9,15 +9,17 @@
 </head>
 <body ng-controller="xym">
 <!--<div   xym1="xym">-->
-<div style="margin: 20px"><input cs="20|1 W NN"></div>
-<div style="margin: 20px"><input cs="20|2 W NN"></div>
-<div style="margin: 20px"><input cs="22|1 W NN"></div>
-<div style="margin: 20px"><input cs="20|2 W NN"></div>
-<div style="margin: 20px"><input cs="20|W 1 2 NN"></div>
-
-
-<input type="button" ng-disabled="!rs(1)" value="点击"/>
-<input type="button" ng-disabled="!rs(2)" value="点击"/>
+<div style="margin: 20px"><p>标签格式 cs="20|1 W NN" 限制长度20 校验类型为W(字符型) NN(非空) 第一组</p><input cs="20|1 W NN"></div>
+<div style="margin: 20px"><p>cs="20|2 W DN" 限制长度20 校验类型为DN(浮点型正数) NN(非空) 第二组</p><input cs="20|2 DN NN"></div>
+<div style="margin: 20px"><p>cs="22|1 IN NN" IN为正整数 分组第一组</p><input cs="22|1 IN NN"></div>
+<div style="margin: 20px"><p> cs="20|2 W NN"</p><input cs="20|2 W NN"></div>
+<div style="margin: 20px"><p>cs="20|W 1 2 NN" 分组1 2组</p><input cs="20|W 1 2 NN"></div>
+<div><p>ng-disabled="!rs()"  只有所有分组满足条件才可以确认</p><input type="button" ng-disabled="!rs()" value="点击"/>
+</div>
+<div><p>ng-disabled="!rs(1)"  只有分组1满足条件才可以确认</p><input type="button" ng-disabled="!rs(1)" value="点击"/>
+</div>
+<div><p>ng-disabled="!rs(2)"  只有分组2满足条件才可以确认</p><input type="button" ng-disabled="!rs(2)" value="点击"/>
+</div>
 <!--</div>-->
 </body>
 </html>
