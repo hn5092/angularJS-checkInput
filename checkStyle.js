@@ -324,6 +324,7 @@ function createDirective() {
                             }
 
                             iElem.bind('keyup', scope.check);
+                            setTimeout(5000,scope.check());
                             //console.log(scope.groupByGroupInfo);
                             ////console.log(flag);
                             //setInterval(scope.check, "2000");
